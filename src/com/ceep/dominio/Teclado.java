@@ -9,6 +9,7 @@ public class Teclado extends DispositivoEntrada{
 
     public Teclado(String tipoEntrada, String marca) {
         super(tipoEntrada, marca);
+        idTeclado = ++Teclado.contadorteclados;
        
     }
 
