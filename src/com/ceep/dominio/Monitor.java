@@ -3,26 +3,19 @@ package com.ceep.dominio;
 
 
 public class Monitor {
-    private int idMonitor;
+    private final int idMonitor;
     private String marca;
-    private double tamaño;
+    private double tamanio;
     private static int contadorMonitores;
 
     public Monitor() {
-        this.idMonitor = ++Monitor.contadorMonitores;
+        this.idMonitor = ++contadorMonitores;
     }
 
     public Monitor(String marca, double tamaño) {
+        this();
         this.marca = marca;
-        this.tamaño = tamaño;
-    }
-
-    public int getIdMonitor() {
-        return idMonitor;
-    }
-
-    public void setIdMonitor(int idMonitor) {
-        this.idMonitor = idMonitor;
+        this.tamanio = tamaño;
     }
 
     public String getMarca() {
@@ -34,11 +27,11 @@ public class Monitor {
     }
 
     public double getTamaño() {
-        return tamaño;
+        return tamanio;
     }
 
-    public void setTamaño(double tamaño) {
-        this.tamaño = tamaño;
+    public void setTamaño(double tamanio) {
+        this.tamanio = tamanio;
     }
 
     public static int getContadorMonitores() {
@@ -51,7 +44,7 @@ public class Monitor {
 
     @Override
     public String toString() {
-        return "Monitor{" + "idMonitor=" + idMonitor + ", marca=" + marca + ", tama\u00f1o=" + tamaño + '}';
+        return "Monitor{" + "idMonitor=" + idMonitor + ", marca=" + marca + ", tama\u00f1o=" + tamanio + '}';
     }
     
     

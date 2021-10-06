@@ -11,10 +11,7 @@ public class DispositivoEntrada {
         this.marca = marca;
     }
 
-    @Override
-    public String toString() {
-        return "DispositivoEntrada{" + "tipoEntrada=" + tipoEntrada + ", marca=" + marca + '}';
-    }
+    
 
     public String getTipoEntrada() {
         return tipoEntrada;
@@ -32,5 +29,9 @@ public class DispositivoEntrada {
         this.marca = marca;
     }
     
+    @Override //porque toda clase es un extends de object
+    public String toString() {
+        return "DispositivoEntrada{" + "tipoEntrada=" + tipoEntrada + ", marca=" + marca + '}';
+    }
     
 }

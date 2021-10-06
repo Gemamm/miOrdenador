@@ -4,18 +4,18 @@ package com.ceep.dominio;
 
 public class Teclado extends DispositivoEntrada{
     
-    private int idTeclado;
-    private static int contadorteclados;
+    private final int idTeclado;
+    private static int contadorTeclados;
 
     public Teclado(String tipoEntrada, String marca) {
         super(tipoEntrada, marca);
-        idTeclado = ++Teclado.contadorteclados;
+        idTeclado = ++Teclado.contadorTeclados;
        
     }
 
     @Override
     public String toString() {
-        return "Teclado{" + "idTeclado=" + idTeclado + '}';
+        return "Teclado{" + "idTeclado=" + idTeclado + '}'+ super.toString();
     }
     
     
